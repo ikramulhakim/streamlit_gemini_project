@@ -18,7 +18,7 @@ def note_generate(images):
               add markdown to differentiate sections,in bangla and english both)."""
 
     response=client.models.generate_content(
-        model="gemini-3-flash-preview",
+        model="gemini-2.5-flash-preview",
         contents=[images,prompt]
         )
     
@@ -40,7 +40,7 @@ def quiz_generate(images,difficulty):
     prompt=f"Generate 3 quizzes based on the {difficulty}. Make sure to add markdown to differentiate the options. Add correct answer too,after the quiz"
 
     response=client.models.generate_content(
-        model="gemini-3-flash-preview",
+        model="gemini-2.5-flash-preview",
         contents=[images,prompt]
         )
     return response.text
